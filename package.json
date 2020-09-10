@@ -5,8 +5,8 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass" : "sass --watch ./main.scss:./style.css",
-    "bs" : "browser-sync start --proxy localhost/**  --files '**/*' --no-notify"
+    "sass": "sass --watch ./main.scss:./style.css",
+    "bs": "browser-sync start --proxy localhost/**  --files '**/*' --no-notify"
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/JustFS/basic-project-file/issues"
   },
-  "homepage": "https://github.com/JustFS/basic-project-file#readme"
+  "homepage": "https://github.com/JustFS/basic-project-file#readme",
+  "dependencies": {
+    "sass": "^1.26.10"
+  }
 }

@@ -1,14 +1,5 @@
-### Fichier de base pour commencer un mini-projet 
+#### Démarrer projet avec Sass
 
-Avec : 
-* des photos randoms
-* une navbar toute faite
-* un body tout fait
-* des sons
-* des svg
-* jQuery et Bootstrap reliés
+- `npm run sass`
 
-#### Démarrer projet avec Sass 
-* `npm run sass`
-
-browser-sync start --proxy localhost/***  --files '**/*' --no-notify
+browser-sync start --proxy localhost/**\* --files '**/\*' --no-notify
