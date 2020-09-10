@@ -7,6 +7,7 @@ form.addEventListener("submit", (e) => {
   // Quand je submit (entrée) je vais me récupérer un evenemnt
   e.preventDefault();
   list.innerHTML += `<li>${item.value}</li>`; // on va ajouter l'élément
+  storage(); // a chaque fois que j'ajoute un elemnts j'le stock dans le localstorage
 
   item.value = ""; // me permettra de vider la zone de saisie quand j'aurai validé
 });
@@ -22,6 +23,7 @@ list.addEventListener("click", (e) => {
     // SI il a pas la class checkecd alors on lui met et le  SASS changera l'icone :) !!
     e.target.classList.add("checked");
   }
+  storage(); // ici je réactualise le stockage
 });
 
 // Partie stockage
@@ -29,3 +31,12 @@ list.addEventListener("click", (e) => {
 function storage() {
   window.localStorage.todoList = list.innerHTML;
 }
+function getValues() {
+  let storageContent = window.localStorage.todoList;
+  if (!storageContent) {
+    list.innerHTML = `<li>Cliquez sur un todo pour le supprimer</li>`;
+  } else {
+    list.innerHTML = storageContent;
+  }
+}
+getValues();
